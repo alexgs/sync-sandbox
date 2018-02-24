@@ -1,4 +1,3 @@
-#noinspection CucumberUndefinedStep
 Feature: Merge scalar data in a Map
   Scenario: Add "value:1" to an empty Map
     Given "m" is an empty Map
