@@ -15,7 +15,7 @@
   "license": "BSD-3-Clause",
   "private": true,
   "scripts": {
-    "test": "npm run build && mocha test/unit-tests.js",
+    "test": "npm run build && mocha test/*.js",
     "build": "babel src -d dist",
     "cuke": "cucumber-js --require-module babel-register ./test/features"
   },
