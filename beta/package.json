@@ -1,0 +1,53 @@
+{
+  "name": "@philgs/sync-sandbox-alpha",
+  "version": "0.1.0",
+  "description": "My first foray into \"conflict-free replicative data types\" (CRDTs)",
+  "main": "index.js",
+  "author": {
+    "name": "Phil Gates-Shannon",
+    "email": "phil.gs@gmail.com",
+    "url": "http://philgs.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philgs/sync-sandbox.git"
+  },
+  "license": "BSD-3-Clause",
+  "private": true,
+  "scripts": {
+    "test": "npm run build && mocha",
+    "build": "babel src -d dist",
+    "cuke": "cucumber-js --require-module babel-register ./features"
+  },
+  "homepage": "https://github.com/philgs/sync-sandbox",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.12.0"
+          }
+        }
+      ],
+      "stage-3"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cucumber": "^4.0.0",
+    "dirty-chai": "^2.0.1",
+    "mocha": "^5.0.1"
+  }
+}
